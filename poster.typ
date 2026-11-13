@@ -110,6 +110,8 @@
 
 		As outlined in their proof of principle paper, age-related loss of gene coordination is #todo[correlated] with aging @2025_loss_of_gene_gene_coordination_in_aging_wang.
 
+		Neurons especially #todo[vulnerable/susceptible], since most are post-mitotic throughout life (only #todo[$0.1%$] adult neurogenensis).
+
 		#Glspl("GRN"), #gls("TF"), #gls("G")
 
 		#lorem(50) @2026_regvelo_wang
@@ -135,7 +137,9 @@
 // TODO: rename description to disruptions?
 #frame(tag: "description")[
 
-	== Disruptions of GRNs
+	== Disruptions of GRNs during aging
+
+	A disruption of gene expression is observed during aging, with reduced gene expression levels and gene-to-gene coordination across tissues @2025_loss_of_gene_gene_coordination_in_aging_wang @2026_restoring_grns_with_knock_ins_mugler.
 
 	#lorem(30)
 
@@ -154,6 +158,8 @@
 	Single knock-ins were used to restore age-related #todo[information loss] in #glspl("GRN") @2026_restoring_grns_with_knock_ins_mugler; #todo[thus restoring function].
 
 	This offers a proof-of-principle that targetted interventions on #glspl("GRN") may be used for restoring function in aging.
+
+	#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)] @2026_restoring_grns_with_knock_ins_mugler.
 
 
 	#colbreak()
@@ -190,7 +196,7 @@
 
 		== Summary
 
-		#lorem(3) @2026_tabula_sapiens_jones
+		#lorem(3)
 
 		#lorem(5)
 
