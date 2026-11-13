@@ -167,15 +167,17 @@
 	),
 )
 
+#let palette = (
+	base:      luma(10%),
+	fg:        black,
+	bg:        white,
+	highlight: cellpress-red,
+	contrast:  cellpress-blue,
+	melon:     orange.lighten(80%), // rgb("#FEBFAA")
+)
+
 #let custom-theme = theme-helper(
-	palette: (
-		base:      luma(10%),
-		fg:        black,
-		bg:        white,
-		highlight: cellpress-red,
-		contrast:  cellpress-blue,
-		melon:     orange.lighten(80%), // rgb("#FEBFAA")
-	),
+	palette: palette,
 	fonts: (
 		base: "Source Sans Pro",
 		raw:  "Source Code Pro",
@@ -226,6 +228,9 @@
 			default: (
 				size: 26pt, // 9mm
 			),
+		),
+		par: (
+			introduction: (justify: true),
 		),
 	),
 )
