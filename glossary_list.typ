@@ -15,6 +15,10 @@
 		long: "gene regulatory network",
 	),
 	(
+		key: "CRC",
+		long: "core regulatory circuit",
+	),
+	(
 		key: "TF",
 		long: "transcription factor",
 	),

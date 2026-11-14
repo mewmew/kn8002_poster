@@ -18,24 +18,6 @@
 	)
 )
 
-#show: poster.with(
-	title: [Gene regulatory networks in maintenance of cell identity],
-	subtitle: box(inset: 6mm)[Disruption during aging and targetted interventions],
-	authors: [
-		Robin Eklind \
-		#text(weight: "regular")[#emph[supervisor:]]
-		#v(-0.7em)
-		Marek Bartosovic
-	],
-	affiliation: [Stockholm University],
-	qr-code: qr,
-	//date: datetime.today().display(),
-	cover-image: image("/inc/regvelo.png"), // TODO: replace cover image (or use PDF version)
-	credit: "Poster figures adapted from papers in reference list.",
-	foreground: foreground,
-	background: background,
-)
-
 #show ref: set text(fill: cellpress-blue)
 #show link: set text(fill: cellpress-blue)
 #show cite: set text(fill: cellpress-blue)
@@ -63,6 +45,43 @@
 
 #show: make-glossary
 
+// === [ Glossary ] ============================================================
+
+#import "/glossary_list.typ": glossary-list
+
+#register-glossary(glossary-list)
+
+#show: poster.with(
+	title: [Gene regulatory networks in maintenance of cell identity],
+	subtitle: box(inset: 6mm)[Disruption during ageing and targetted interventions],
+	authors: [
+		Robin Eklind \
+		#text(weight: "regular")[#emph[supervisor:]]
+		#v(-0.7em)
+		Marek Bartosovic
+	],
+	affiliation: [Stockholm University],
+	qr-code: qr,
+	//date: datetime.today().display(),
+	cover-image: [
+		#figure(
+			image("/inc/core_regulatory_circuit.pdf", width: 80%),
+			caption: [#Gls("CRC") maintaining cell identity via positive feedback loop in cell-type specific #gls("GRN")@2024_cell_fate_determination_via_core_regulatory_complex_lee.]
+		) <fig-core_regulatory_circuit>
+
+		#figure(
+			image("/inc/epigenetic_aging.pdf"),
+			caption: [Epigenetic ageing disrupts cell-type specific regulation of gene expression@2026_epigenetic_aging_yucel.],
+		) <fig-epigenetic_aging>
+
+		// TODO: add RegVelo image.
+		//#image("/inc/regvelo.png")
+	], // TODO: replace cover image (or use PDF version)
+	credit: "Poster figures adapted from papers in reference list.",
+	foreground: foreground,
+	background: background,
+)
+
 #let gen-image(img) = layout(container => {
 	let width = 100%
 	let aspect-ratio = 1 // 1.3
@@ -89,12 +108,6 @@
 	}
 )
 
-// === [ Glossary ] ============================================================
-
-#import "/glossary_list.typ": glossary-list
-
-#register-glossary(glossary-list)
-
 // === [/ Glossary ] ===========================================================
 
 // === [ Introduction ] ========================================================
@@ -102,15 +115,15 @@
 #frame(tag: "introduction")[
 	#columns(2)[
 
-		An gradual loss of gene-to-gene coordination is observed during aging across diverse tissues.
+		An gradual loss of gene-to-gene coordination is observed during ageing across diverse tissues.
 
 		A universal trend across different tissues
 
-		Loss of gene-to-gene coordination during aging across tissues.
+		Loss of gene-to-gene coordination during ageing across tissues.
 
-		As outlined in their proof of principle paper, age-related loss of gene coordination is #todo[correlated] with aging @2025_loss_of_gene_gene_coordination_in_aging_wang.
+		As outlined in their proof of principle paper, age-related loss of gene coordination is #todo[correlated] with ageing @2025_loss_of_gene_gene_coordination_in_aging_wang.
 
-		Neurons especially #todo[vulnerable/susceptible], since most are post-mitotic throughout life (only #todo[$0.1%$] adult neurogenensis).
+		Neurons especially #todo[vulnerable/susceptible], since most are post-mitotic throughout life (only #todo[0.1%] adult neurogenensis).
 
 		#Glspl("GRN"), #gls("TF"), #gls("G")
 
@@ -137,9 +150,9 @@
 // TODO: rename description to disruptions?
 #frame(tag: "description")[
 
-	== Disruptions of GRNs during aging
+	== Disruptions of GRNs during ageing
 
-	A disruption of gene expression is observed during aging, with reduced gene expression levels and gene-to-gene coordination across tissues @2025_loss_of_gene_gene_coordination_in_aging_wang @2026_restoring_grns_with_knock_ins_mugler.
+	A disruption of gene expression is observed during ageing, with reduced gene expression levels and gene-to-gene coordination across tissues @2025_loss_of_gene_gene_coordination_in_aging_wang @2026_restoring_grns_with_knock_ins_mugler.
 
 	#lorem(30)
 
@@ -155,16 +168,14 @@
 #frame(tag: "methods")[
 	== Interventions on GRNs
 
-	Single knock-ins were used to restore age-related #todo[information loss] in #glspl("GRN") @2026_restoring_grns_with_knock_ins_mugler; #todo[thus restoring function].
+	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN") @2026_restoring_grns_with_knock_ins_mugler.
 
-	This offers a proof-of-principle that targetted interventions on #glspl("GRN") may be used for restoring function in aging.
+	This offers a proof-of-principle that targetted interventions on #glspl("GRN") may be used for restoring gene regulation and potentially function in ageing.
 
-	#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)] @2026_restoring_grns_with_knock_ins_mugler.
+	// rather than diminishing returns
+	Furthermore, there are indications that multiple knock-ins could have approximately additive effects on restoration of gene regulation @2026_restoring_grns_with_knock_ins_mugler.
 
-
-	#colbreak()
-
-	#lorem(30)
+	//#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)] @2026_restoring_grns_with_knock_ins_mugler.
 
 	=== Spring equinox
 
