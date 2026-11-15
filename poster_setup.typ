@@ -74,19 +74,19 @@
 
 // TODO: rename description to disruption?
 
-// (width: 140, height: 360)
+// (width: 140, height: 300)
 #let description-width  = half-side-width // 140 (14.0 cm)
-#let description-height = cover-height    // 360 (36.0 cm)
+#let description-height = 300             // 300 (30.0 cm)
 
 // TODO: rename methods to interventions?
 
-// (width: 140, height: 360)
+// (width: 140, height: 300)
 #let methods-width  = half-side-width // 140 (14.0 cm)
-#let methods-height = cover-height    // 360 (36.0 cm)
+#let methods-height = 300             // 300 (30.0 cm)
 
-// (width: 300, height: 150)
+// (width: 300, height: 210)
 #let illustration-width  = side-width // 300 (30.0 cm)
-#let illustration-height = 150        // 150 (15.0 cm)
+#let illustration-height = 210        // 210 (21.0 cm)
 
 #let description-x  = ride-side-x                                         // 385              = 385 (38.5 cm)
 #let methods-x      = description-x + description-width + 2*pad-half-side // 385 + 140 + 2*10 = 545 (54.5 cm)
@@ -95,8 +95,8 @@
 
 #let description-y  = pad                                               // 35             =  35  (3.5 cm)
 #let methods-y      = pad                                               // 35             =  35  (3.5 cm)
-#let illustration-y = description-y + description-height + pad-mid      // 35 + 360 + 25  = 420 (42.0 cm)
-#let outlook-y      = illustration-y + illustration-height + pad-mid    // 420 + 150 + 25 = 595 (59.5 cm)
+#let illustration-y = description-y + description-height + pad-mid      // 35 + 300 + 25  = 360 (36.0 cm)
+#let outlook-y      = illustration-y + illustration-height + pad-mid    // 360 + 210 + 25 = 595 (59.5 cm)
 
 // (width: 300, height: 370)
 #let outlook-width  = side-width                     // 300             = 300 (30.0 cm)

@@ -71,42 +71,17 @@
 
 		#figure(
 			image("/inc/epigenetic_aging.pdf"),
-			caption: [Epigenetic ageing disrupts regulation of gene expression, thus altering cell-type specific #glspl("GRN")@2026_epigenetic_aging_yucel.],
+			caption: [Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN")@2026_epigenetic_aging_yucel.],
 		) <fig-epigenetic_aging>
-
-		// TODO: add RegVelo image.
-		//#image("/inc/regvelo.png")
-	], // TODO: replace cover image (or use PDF version)
+	],
 	credit: "Poster figures adapted from papers in reference list.",
 	foreground: foreground,
 	background: background,
 )
 
-#let gen-image(img) = layout(container => {
-	let width = 100%
-	let aspect-ratio = 1 // 1.3
-	let radius = 10pt
-	let margin = 8mm
-	let fill = luma(92%)
-	let height = container.width * aspect-ratio
-		rect(
-			fill: white.transparentize(0%),
-			width: width,
-			height: height,
-			radius: radius,
-		)[
-			#align(
-				horizon + center,
-				square(
-					inset: 0pt,
-					width: container.width - margin,
-					stroke: none,
-					fill: fill,
-				)[#img]
-			)
-		]
-	}
-)
+#let gen-image(img) = {
+	rect(fill: white, radius: 5mm)[#img]
+}
 
 // === [/ Glossary ] ===========================================================
 
@@ -185,16 +160,9 @@
 #frame(tag: "illustration")[
 
 	#figure(
-		grid(
-			columns: 3,
-			gutter: pad-mini * 1mm,
-			subfigure(gen-image(rect(fill: aqua)), caption: [foo]),
-			subfigure(gen-image(rect(fill: aqua)), caption: [foo]),
-			subfigure(gen-image(rect(fill: aqua)), caption: [foo]),
-		),
-		gap: 1cm,
-		caption: [foo],
-	)
+		gen-image(image("/inc/regvelo.png")),
+		caption: [RegVelo #todo[#lorem(10)] Cell fate prediction after #emph[in silico] perturbations validated via knock-out experiment in zebrafish@2026_regvelo_wang.],
+	) <fig-regvelo>
 
 ]
 
