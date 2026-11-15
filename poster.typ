@@ -66,12 +66,12 @@
 	cover-image: [
 		#figure(
 			image("/inc/core_regulatory_circuit.pdf", width: 80%),
-			caption: [#Gls("CRC") maintaining cell identity via positive feedback loop in cell-type specific #gls("GRN")@2024_cell_fate_determination_via_core_regulatory_complex_lee.]
+			caption: [#Glspl("CRC") maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN")@2024_cell_fate_determination_via_core_regulatory_complex_lee.]
 		) <fig-core_regulatory_circuit>
 
 		#figure(
 			image("/inc/epigenetic_aging.pdf"),
-			caption: [Epigenetic ageing disrupts cell-type specific regulation of gene expression@2026_epigenetic_aging_yucel.],
+			caption: [Epigenetic ageing disrupts regulation of gene expression, thus altering cell-type specific #glspl("GRN")@2026_epigenetic_aging_yucel.],
 		) <fig-epigenetic_aging>
 
 		// TODO: add RegVelo image.
@@ -125,11 +125,9 @@
 
 		Neurons especially #todo[vulnerable/susceptible], since most are post-mitotic throughout life (only #todo[0.1%] adult neurogenensis).
 
-		#Glspl("GRN"), #gls("TF"), #gls("G")
-
 		#lorem(50) @2026_regvelo_wang
 
-		#colbreak()
+		== GRN inference
 
 		#lorem(20)
 	]
@@ -141,7 +139,7 @@
 #frame(tag: "gap")[
 	#figure(
 		image("/inc/gene_regulatory_network.png"),
-		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", first: false, update: false) and #gls("TF", first: false, update: false) interactions.],
+		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions.],
 	) <fig-grn>
 ]
 
@@ -211,9 +209,9 @@
 
 		#lorem(5)
 
-		1. #lorem(10)
+		1. #Glspl("CRC") maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN").
 
-		2. #lorem(25)
+		2. Epigenetic ageing disrupts regulation of gene expressions, altering cell-type specific #glspl("GRN").
 
 		#lorem(10)
 
