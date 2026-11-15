@@ -65,13 +65,14 @@
 	//date: datetime.today().display(),
 	cover-image: [
 		#figure(
-			image("/inc/core_regulatory_circuit.pdf", width: 80%),
-			caption: [#Glspl("CRC") maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN")@2024_cell_fate_determination_via_core_regulatory_complex_lee.]
+			image("/inc/core_regulatory_circuit.pdf", width: 85%),
+			caption: [#Glspl("CRC", update: false, first: false) maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN", update: false, first: false)@2024_cell_fate_determination_via_core_regulatory_complex_lee.]
 		) <fig-core_regulatory_circuit>
 
 		#figure(
 			image("/inc/epigenetic_aging.pdf"),
-			caption: [Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN")@2026_epigenetic_aging_yucel.],
+			// NOTE: text size hack to fit on one line.
+			caption: text(size: 0.98em)[Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN", update: false, first: false)@2026_epigenetic_aging_yucel.],
 		) <fig-epigenetic_aging>
 	],
 	credit: "Poster figures adapted from papers in reference list.",
@@ -90,9 +91,15 @@
 #frame(tag: "introduction")[
 	#columns(2)[
 
-		An gradual loss of gene-to-gene coordination is observed during ageing across diverse tissues.
+		As cells journey during development across the epigenetic Waddingtonian landscape, their cell fate is guided by morphogens and cell-cell signalling that activate or repress genes, thus establishing and (re)shaping cell-type specific gene expressions (see @fig-core_regulatory_circuit).
 
-		A universal trend across different tissues
+		Such cell-type specific regulation of gene expression can be modelled as a #gls("GRN"), which captures positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn).
+
+		Ingenious in its simplicity, #todo[foo] #gls("CRC")
+
+		A gradual loss of gene-to-gene coordination is observed during ageing across diverse tissues.
+
+		A universal trend across different tissues, #todo[individual (rather than popilation based)]
 
 		Loss of gene-to-gene coordination during ageing across tissues.
 
@@ -100,11 +107,15 @@
 
 		Neurons especially #todo[vulnerable/susceptible], since most are post-mitotic throughout life (only #todo[0.1%] adult neurogenensis).
 
-		#lorem(50) @2026_regvelo_wang
+		#lorem(10) @2026_regvelo_wang
 
 		== GRN inference
 
 		#lorem(20)
+
+		=== In silico perturbation
+
+		#lorem(15)
 	]
 ]
 
