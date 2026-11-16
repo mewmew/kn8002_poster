@@ -109,6 +109,10 @@
 
 		#lorem(10) @2026_regvelo_wang
 
+		#todo[TODO: remove single knock-in paper.]
+
+		#todo[Predict suceptible genes in neuron cell (sub)types. Vulnerable. ALS]
+
 		== GRN inference
 
 		#lorem(20)
@@ -125,7 +129,7 @@
 #frame(tag: "gap")[
 	#figure(
 		image("/inc/gene_regulatory_network.png"),
-		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions.],
+		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions@2026_regvelo_wang.],
 	) <fig-grn>
 ]
 
@@ -136,7 +140,7 @@
 
 	== Disruptions of GRNs during ageing
 
-	A disruption of gene expression is observed during ageing, with reduced gene expression levels and gene-to-gene coordination across tissues @2025_loss_of_gene_gene_coordination_in_aging_wang @2026_restoring_grns_with_knock_ins_mugler.
+	A disruption of gene expression is observed during ageing, with reduced gene expression levels and gene-to-gene coordination across tissues @2025_loss_of_gene_gene_coordination_in_aging_wang.
 
 	#lorem(30)
 
@@ -152,12 +156,16 @@
 #frame(tag: "methods")[
 	== Interventions on GRNs
 
+	#lorem(50)
+
+	/*
 	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN") @2026_restoring_grns_with_knock_ins_mugler.
 
 	This offers a proof-of-principle that targetted interventions on #glspl("GRN") may be used for restoring gene regulation and potentially function in ageing.
 
 	// rather than diminishing returns
 	Furthermore, there are indications that multiple knock-ins could have approximately additive effects on restoration of gene regulation @2026_restoring_grns_with_knock_ins_mugler.
+	*/
 
 	//#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)] @2026_restoring_grns_with_knock_ins_mugler.
 
@@ -203,6 +211,8 @@
 		- #lorem(20)
 
 		#lorem(10)
+
+		#colbreak()
 
 		== References
 
