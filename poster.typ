@@ -3,14 +3,13 @@
 #import "poster_setup.typ": poster, frame, foreground, background, palette, pad-mini
 
 #import "@preview/cellpress-unofficial:0.1.2": cellpress-blue
-#import "@preview/hallon:0.1.4" as hallon: subfigure
 #import "@preview/glossarium:0.5.10": register-glossary, make-glossary, gls, Gls, glspl, Glspl
 #import "@preview/codetastic:0.2.2": qrcode
 
 #let qr = block(
 	inset: (left: 1cm),
 	qrcode(
-		"https://www.su.se/english/research/research-catalogue/research-groups/4/marek-bartosovics-research-group", // TODO: update to poster PDF/source code?
+		"https://www.su.se/english/research/research-catalogue/research-groups/4/marek-bartosovics-research-group",
 		width: 3cm,
 		//colors: (palette.contrast.transparentize(97%), black),
 		colors: (white, black),
@@ -18,10 +17,16 @@
 	)
 )
 
+#let term(body) = {
+	text(fill: palette.highlight.darken(40%))[#body]
+}
+
 #show ref: set text(fill: cellpress-blue)
 #show link: set text(fill: cellpress-blue)
 #show cite: set text(fill: cellpress-blue)
 #show footnote: set text(fill: cellpress-blue)
+
+#set list(spacing: 1em)
 
 #set figure(supplement: "Fig")
 #set figure.caption(separator: ".")
@@ -41,7 +46,7 @@
 	)
 }
 
-#show: hallon.style-figures.with(figure-caption: figure-caption)
+#show figure.caption: figure-caption
 
 #show: make-glossary
 
@@ -91,33 +96,31 @@
 #frame(tag: "introduction")[
 	#columns(2)[
 
-		As cells journey during development across the epigenetic Waddingtonian landscape, their cell fate is guided by morphogens and cell-cell signalling that activate or repress genes, thus establishing and (re)shaping cell-type specific gene expressions (see @fig-core_regulatory_circuit).
+		== Journey in cell fate
 
-		Such cell-type specific regulation of gene expression can be modelled as a #gls("GRN"), which captures positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn).
+		As cells journey during development across the epigenetic Waddingtonian landscape, their cell fate is guided by morphogens and cell-cell signalling that activate or repress genes, thus establishing and (re)shaping cell-type specific gene expressions (see @fig-core_regulatory_circuit)@2016_what_is_a_cell_type_arendt.
+
+		Such cell-type specific regulation of gene expression can be modelled as a #gls("GRN"), which captures positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn)@2026_regvelo_wang.
+
+		=== What is a cell type?
+
+		A cell type can be characterized based on the genes it expresses, including:
+
+		- #term[housekeeping genes]: \ universal cellular maintenance (e.g. energy metabolism)@2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
+		- #term[effector genes]: \ cell-type specific physiological functions (e.g. ion channels)@2026_dissecting_grns_coverning_cell_fate_ding
+		- #term[terminal selector genes]: \ establish and maintain cell identity through coordinated regulation of #glspl("TF"), including regulation of downstream effector genes@2016_what_is_a_cell_type_arendt
+
+		=== Maintenance of cell identity
+
+		#lorem(5)
+
+		Importantly, the maintenance of canonical gene expression
 
 		Ingenious in its simplicity, #todo[foo] #gls("CRC")
-
-		A gradual loss of gene-to-gene coordination is observed during ageing across diverse tissues.
-
-		A universal trend across different tissues, #todo[individual (rather than popilation based)]
-
-		Loss of gene-to-gene coordination during ageing across tissues.
-
-		As outlined in their proof of principle paper, age-related loss of gene coordination is #todo[correlated] with ageing @2025_loss_of_gene_gene_coordination_in_aging_wang.
 
 		Neurons especially #todo[vulnerable/susceptible], since most are post-mitotic throughout life (only #todo[0.1%] adult neurogenensis).
 
 		#lorem(10) @2026_regvelo_wang
-
-		#todo[TODO: remove single knock-in paper.]
-
-		#todo[Predict suceptible genes in neuron cell (sub)types. Vulnerable. ALS]
-
-		== GRN inference
-
-		#lorem(20)
-
-		=== In silico perturbation
 
 		#lorem(15)
 	]
@@ -142,11 +145,25 @@
 
 	A disruption of gene expression is observed during ageing, with reduced gene expression levels and gene-to-gene coordination across tissues @2025_loss_of_gene_gene_coordination_in_aging_wang.
 
-	#lorem(30)
+	Loss of gene-to-gene coordination during ageing across tissues.
+
+	A universal trend across different tissues, #todo[individual (rather than popilation based)]
+
+	#lorem(10)@2025_brain_aging_and_rejuvenation_sun.
+
+	// verbatim: "transcriptomes of specific neurons are highly predictive of an individual’s age" (ref: 2024, Single-cell genomics and regulatory networks for 388 human brains)
 
 	=== Rainwater
 
-	#lorem(25)
+	A gradual loss of gene-to-gene coordination is observed during ageing across diverse tissues.
+
+	As outlined in their proof of principle paper, there is a significant positive correlation between loss of gene-to-gene coordination and ageing @2025_loss_of_gene_gene_coordination_in_aging_wang.
+
+	#todo[Molecular regulatory network, connecting cell-cell signalling and gene regulation.]
+
+	// verbatim: "Notably, a transition point emerged at 24 years of age, after which compositional changes declined sharply, marking a shift from active developmental remodelling to relative cellular stabil- ity in the DLPFC" (ref: 2026, Lifespan single-cell transcriptomic atlas of the human prefrontal cortex)
+
+	#todo[Predict suceptible genes in neuron cell (sub)types. Vulnerable. ALS@2026_transcriptomic_altas_brain_disoders_lee]
 
 ]
 
@@ -154,7 +171,7 @@
 
 // TODO: rename methods to interventions?
 #frame(tag: "methods")[
-	== Interventions on GRNs
+	== Inference and in silico perturbation of GRNs
 
 	#lorem(50)
 
@@ -169,9 +186,14 @@
 
 	//#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)] @2026_restoring_grns_with_knock_ins_mugler.
 
-	=== Spring equinox
+	=== In silico perturbation
 
 	#lorem(15)
+
+	=== In vivo validation
+
+	In their pivotal study, #emph[in silico] perturbations were used to predict changes in cell fate if key #glspl("TF") were disrupted. These predictions were later validated #emph[in vivo] using knock-out experiment in zebrafish@2026_regvelo_wang.
+
 ]
 
 // === [ Illustrations ] =======================================================
@@ -180,7 +202,7 @@
 
 	#figure(
 		gen-image(image("/inc/regvelo.png")),
-		caption: [RegVelo #todo[#lorem(10)] Cell fate prediction after #emph[in silico] perturbations validated via knock-out experiment in zebrafish@2026_regvelo_wang.],
+		caption: [RegVelo infers cell-type specific #glspl("GRN") from #gls("sc", update: false, first: false)-multiomic data. The inferred #glspl("GRN") are used to model cell fate probabilities and simulate the effects of #gls("TF", update: false, first: false)-perturbations #emph[in silico]@2026_regvelo_wang.],
 	) <fig-regvelo>
 
 ]
@@ -192,19 +214,17 @@
 
 		== Summary
 
-		#lorem(3)
-
-		#lorem(5)
-
 		1. #Glspl("CRC") maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN").
 
 		2. Epigenetic ageing disrupts regulation of gene expressions, altering cell-type specific #glspl("GRN").
 
-		#lorem(10)
+		3. Cell-type specific #glspl("GRN") can be inferred from #gls("sc") multiomic data (e.g. using RegVelo).
 
 		== Future research
 
 		#lorem(15)
+
+		- Interventions on GRNs.
 
 		- #lorem(5)
 
@@ -216,7 +236,7 @@
 
 		== References
 
-		#set text(size: 18pt)
+		#set text(size: 14pt)
 
 		#bibliography("references.bib", title: none, style: "spie")
 

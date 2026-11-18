@@ -27,6 +27,10 @@
 		long: "gene",
 	),
 	(
+		key: "sc",
+		long: "single-cell",
+	),
+	(
 		key: "CoRC",
 		long: "core regulatory complex",
 		longplural: [core regulatory complexes],
