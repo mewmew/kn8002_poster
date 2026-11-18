@@ -123,7 +123,7 @@
 		In essence, this captures how a post-mitotic cell maintains its cell identity.@2016_what_is_a_cell_type_arendt
 
 		// (not considering adult neurogenesis).
-		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Neurons are especially susceptible since most neurons are post-mitotic throughout adulthood.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
+		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Since neurons are post-mitotic throughout adulthood, they are especially susceptible.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
 	]
 ]
 
