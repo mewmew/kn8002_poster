@@ -19,6 +19,10 @@
 		long: "core regulatory circuit",
 	),
 	(
+		key: "TSG",
+		long: "terminal selector gene",
+	),
+	(
 		key: "TF",
 		long: "transcription factor",
 	),

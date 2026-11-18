@@ -100,11 +100,13 @@
 
 		As cells journey during development across the epigenetic Waddingtonian landscape, their cell fate is guided by morphogens and cell-cell signalling that activate or repress genes, thus establishing and (re)shaping cell-type specific gene expressions (see @fig-core_regulatory_circuit)@2016_what_is_a_cell_type_arendt.
 
-		Such cell-type specific regulation of gene expression can be modelled as a #gls("GRN"), which captures positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn)@2026_regvelo_wang.
+		Such cell-type specific regulation of gene expression can be modelled using #glspl("GRN"), graph representations that capture the positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn)@2026_regvelo_wang.
+
+		//#todo[Meanwhile, the gene regulatory effects of cell-cell signalling can be modelled using molecular regulatory networks.]
 
 		=== What is a cell type?
 
-		A cell type can be characterized based on the genes it expresses, including:
+		A cell type can be characterised based on the genes it expresses, including:
 
 		- #term[housekeeping genes]: \ universal cellular maintenance (e.g. energy metabolism)@2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
 		- #term[effector genes]: \ cell-type specific physiological functions (e.g. ion channels)@2026_dissecting_grns_coverning_cell_fate_ding
@@ -112,17 +114,15 @@
 
 		=== Maintenance of cell identity
 
-		#lorem(5)
+		To establish and maintain cell identity, #glspl("TSG") express #glspl("TF") that maintain their own expression via positive feedback loops, as denoted by a #gls("CRC") within the #gls("GRN") of a given cell type (see @fig-core_regulatory_circuit)@2024_cell_fate_determination_via_core_regulatory_complex_lee @2016_what_is_a_cell_type_arendt.
 
-		Importantly, the maintenance of canonical gene expression
+		Ingenious in its conceptual simplicity, the #gls("CRC") of a given cell type maintains its own expression, regulates the expression of cell-type specific effector genes and inhibits the #glspl("CRC") of alternative cell fates (see @fig-core_regulatory_circuit)@2024_cell_fate_determination_via_core_regulatory_complex_lee @2016_what_is_a_cell_type_arendt.
 
-		Ingenious in its simplicity, #todo[foo] #gls("CRC")
+		//Within the #gls("GRN") of a given cell type, the #gls("CRC") corresponds to a strongly connected component of the graph.
 
-		Neurons especially #todo[vulnerable/susceptible], since most are post-mitotic throughout life (only #todo[0.1%] adult neurogenensis).
+		In essence, this captures how a post-mitotic cell maintains its cell identity.
 
-		#lorem(10) @2026_regvelo_wang
-
-		#lorem(15)
+		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Neurons are especially susceptible since most neurons are post-mitotic throughout adulthood. // (not considering adult neurogenesis).
 	]
 ]
 
@@ -131,7 +131,7 @@
 // TODO: rename gap to grn-image?
 #frame(tag: "gap")[
 	#figure(
-		image("/inc/gene_regulatory_network.png"),
+		image("/inc/gene_regulatory_network.png", width: 80%),
 		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions@2026_regvelo_wang.],
 	) <fig-grn>
 ]

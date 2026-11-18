@@ -39,9 +39,9 @@
 
 // TODO: rename introduction to intro?
 
-// (width: 300, height: 295)
+// (width: 300, height: 300)
 #let intro-width  = side-width
-#let intro-height = 295
+#let intro-height = 300
 
 // (width: 135, height: 105)
 #let details-width  = half-side-width - pad-mini // 140-5 = 135 (13.5 cm)
@@ -60,11 +60,12 @@
 #let title-y    = cover-y + cover-height + pad-mid       // 35 + 360 + 25  = 420 (42.0 cm)
 #let subtitle-y = title-y + title-height + pad-mini      // 420 + 45 + 5   = 470 (47.0 cm)
 #let intro-y    = subtitle-y + subtitle-height + pad-mid // 470 + 45 + 25  = 540 (54.0 cm)
-#let details-y  = intro-y + intro-height + pad-mid       // 540 + 295 + 25 = 860 (86.0 cm)
-#let gap-y      = details-y                              // 860            = 860 (86.0 cm)
+#let details-y  = intro-y + intro-height + pad-mid       // 540 + 300 + 25 = 865 (86.5 cm)
+// NOTE: +15 is a hack to fix more text in the second column of the introduction.
+#let gap-y      = details-y + 15                              // 865            = 865 (86.5 cm)
 
-#let details-height = paper-height - details-y - pad // 1000-860-35 = 105 (10.5 cm)
-#let gap-height     = details-height                 // 105         = 105 (10.5 cm)
+#let details-height = paper-height - details-y - pad // 1000-865-35 = 100 (10.0 cm)
+#let gap-height     = paper-height - gap-y - pad     // 1000-865-35 = 100 (10.0 cm)
 
 // TODO: rename gap to grn-image?
 
