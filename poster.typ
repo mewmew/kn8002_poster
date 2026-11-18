@@ -71,13 +71,13 @@
 	cover-image: [
 		#figure(
 			image("/inc/core_regulatory_circuit.pdf", width: 85%),
-			caption: [#Glspl("CRC", update: false, first: false) maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN", update: false, first: false)@2024_cell_fate_determination_via_core_regulatory_complex_lee.]
+			caption: [#Glspl("CRC", update: false, first: false) maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN", update: false, first: false).@2024_cell_fate_determination_via_core_regulatory_complex_lee]
 		) <fig-core_regulatory_circuit>
 
 		#figure(
 			image("/inc/epigenetic_aging.pdf"),
 			// NOTE: text size hack to fit on one line.
-			caption: text(size: 0.98em)[Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN", update: false, first: false)@2026_epigenetic_aging_yucel.],
+			caption: text(size: 0.98em)[Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN", update: false, first: false).@2026_epigenetic_aging_yucel],
 		) <fig-epigenetic_aging>
 	],
 	credit: "Poster figures adapted from papers in reference list.",
@@ -98,9 +98,9 @@
 
 		== Journey in cell fate
 
-		As cells journey during development across the epigenetic Waddingtonian landscape, their cell fate is guided by morphogens and cell-cell signalling that activate or repress genes, thus establishing and (re)shaping cell-type specific gene expressions (see @fig-core_regulatory_circuit)@2016_what_is_a_cell_type_arendt.
+		As cells journey during development across the epigenetic Waddingtonian landscape, their cell fate is guided by morphogens and cell-cell signalling that activate or repress genes, thus establishing and (re)shaping cell-type specific gene expressions (see @fig-core_regulatory_circuit).@2016_what_is_a_cell_type_arendt
 
-		Such cell-type specific regulation of gene expression can be modelled using #glspl("GRN"), graph representations that capture the positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn)@2026_regvelo_wang.
+		Such cell-type specific regulation of gene expression can be modelled using #glspl("GRN"), graph representations that capture the positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn).@2026_regvelo_wang
 
 		//#todo[Meanwhile, the gene regulatory effects of cell-cell signalling can be modelled using molecular regulatory networks.]
 
@@ -114,15 +114,16 @@
 
 		=== Maintenance of cell identity
 
-		To establish and maintain cell identity, #glspl("TSG") express #glspl("TF") that maintain their own expression via positive feedback loops, as denoted by a #gls("CRC") within the #gls("GRN") of a given cell type (see @fig-core_regulatory_circuit)@2024_cell_fate_determination_via_core_regulatory_complex_lee @2016_what_is_a_cell_type_arendt.
+		To establish and maintain cell identity, #glspl("TSG") express #glspl("TF") that maintain their own expression via positive feedback loops, as denoted by a #gls("CRC") within the #gls("GRN") of a given cell type (see @fig-core_regulatory_circuit).@2024_cell_fate_determination_via_core_regulatory_complex_lee @2016_what_is_a_cell_type_arendt
 
-		Ingenious in its conceptual simplicity, the #gls("CRC") of a given cell type maintains its own expression, regulates the expression of cell-type specific effector genes and inhibits the #glspl("CRC") of alternative cell fates (see @fig-core_regulatory_circuit)@2024_cell_fate_determination_via_core_regulatory_complex_lee @2016_what_is_a_cell_type_arendt.
+		Ingenious in its conceptual simplicity, the #gls("CRC") of a given cell type maintains its own expression, regulates the expression of cell-type specific effector genes and inhibits the #glspl("CRC") of alternative cell fates (see @fig-core_regulatory_circuit).@2024_cell_fate_determination_via_core_regulatory_complex_lee @2016_what_is_a_cell_type_arendt
 
 		//Within the #gls("GRN") of a given cell type, the #gls("CRC") corresponds to a strongly connected component of the graph.
 
-		In essence, this captures how a post-mitotic cell maintains its cell identity.
+		In essence, this captures how a post-mitotic cell maintains its cell identity.@2016_what_is_a_cell_type_arendt
 
-		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Neurons are especially susceptible since most neurons are post-mitotic throughout adulthood. // (not considering adult neurogenesis).
+		// (not considering adult neurogenesis).
+		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Neurons are especially susceptible since most neurons are post-mitotic throughout adulthood.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
 	]
 ]
 
@@ -132,7 +133,7 @@
 #frame(tag: "gap")[
 	#figure(
 		image("/inc/gene_regulatory_network.png", width: 80%),
-		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions@2026_regvelo_wang.],
+		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions.@2026_regvelo_wang],
 	) <fig-grn>
 ]
 
@@ -143,13 +144,13 @@
 
 	== Disruptions of GRNs during ageing
 
-	A disruption of gene expression is observed during ageing, with reduced gene expression levels and gene-to-gene coordination across tissues @2025_loss_of_gene_gene_coordination_in_aging_wang.
+	A disruption of gene expression is observed during ageing, with reduced gene expression levels and gene-to-gene coordination across tissues.@2025_loss_of_gene_gene_coordination_in_aging_wang
 
 	Loss of gene-to-gene coordination during ageing across tissues.
 
 	A universal trend across different tissues, #todo[individual (rather than popilation based)]
 
-	#lorem(10)@2025_brain_aging_and_rejuvenation_sun.
+	#lorem(10)@2025_brain_aging_and_rejuvenation_sun
 
 	// verbatim: "transcriptomes of specific neurons are highly predictive of an individual’s age" (ref: 2024, Single-cell genomics and regulatory networks for 388 human brains)
 
@@ -157,7 +158,7 @@
 
 	A gradual loss of gene-to-gene coordination is observed during ageing across diverse tissues.
 
-	As outlined in their proof of principle paper, there is a significant positive correlation between loss of gene-to-gene coordination and ageing @2025_loss_of_gene_gene_coordination_in_aging_wang.
+	As outlined in their proof of principle paper, there is a significant positive correlation between loss of gene-to-gene coordination and ageing.@2025_loss_of_gene_gene_coordination_in_aging_wang
 
 	#todo[Molecular regulatory network, connecting cell-cell signalling and gene regulation.]
 
@@ -176,15 +177,15 @@
 	#lorem(50)
 
 	/*
-	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN") @2026_restoring_grns_with_knock_ins_mugler.
+	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN").@2026_restoring_grns_with_knock_ins_mugler
 
 	This offers a proof-of-principle that targetted interventions on #glspl("GRN") may be used for restoring gene regulation and potentially function in ageing.
 
 	// rather than diminishing returns
-	Furthermore, there are indications that multiple knock-ins could have approximately additive effects on restoration of gene regulation @2026_restoring_grns_with_knock_ins_mugler.
+	Furthermore, there are indications that multiple knock-ins could have approximately additive effects on restoration of gene regulation.@2026_restoring_grns_with_knock_ins_mugler
 	*/
 
-	//#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)] @2026_restoring_grns_with_knock_ins_mugler.
+	//#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)].@2026_restoring_grns_with_knock_ins_mugler
 
 	=== In silico perturbation
 
@@ -192,7 +193,7 @@
 
 	=== In vivo validation
 
-	In their pivotal study, #emph[in silico] perturbations were used to predict changes in cell fate if key #glspl("TF") were disrupted. These predictions were later validated #emph[in vivo] using knock-out experiment in zebrafish@2026_regvelo_wang.
+	In their pivotal study, #emph[in silico] perturbations were used to predict changes in cell fate if key #glspl("TF") were disrupted. These predictions were later validated #emph[in vivo] using knock-out experiment in zebrafish.@2026_regvelo_wang
 
 ]
 
@@ -202,7 +203,7 @@
 
 	#figure(
 		gen-image(image("/inc/regvelo.png")),
-		caption: [RegVelo infers cell-type specific #glspl("GRN") from #gls("sc", update: false, first: false)-multiomic data. The inferred #glspl("GRN") are used to model cell fate probabilities and simulate the effects of #gls("TF", update: false, first: false)-perturbations #emph[in silico]@2026_regvelo_wang.],
+		caption: [RegVelo infers cell-type specific #glspl("GRN") from #gls("sc", update: false, first: false)-multiomic data. The inferred #glspl("GRN") are used to model cell fate probabilities and simulate the effects of #gls("TF", update: false, first: false)-perturbations #emph[in silico].@2026_regvelo_wang],
 	) <fig-regvelo>
 
 ]
