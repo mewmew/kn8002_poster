@@ -221,6 +221,8 @@
 
 		3. Cell-type specific #glspl("GRN") can be inferred from #gls("sc") multiomic data (e.g. using RegVelo).
 
+		4. #todo[#emph[In silico] perturbations #lorem(10)]
+
 		== Future research
 
 		#lorem(15)
