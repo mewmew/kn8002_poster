@@ -168,13 +168,19 @@
 	- #term[#box(inset: (right: -0.5cm))[Deterioration of nuclear architecture]] \ #box(inset: (right: -0.5cm))[weakened #gls("LAD", update: true, first: false) and #gls("TAD", update: true, first: false) boundaries@2026_epigenetic_aging_yucel]
 	//loss of specificity in enhancer-promotor looping interactions
 
-	- #term[Disruption of epigenetic memory] \ #todo[disruption of epigenetic feedback loops]
+	- #term[Disruption of epigenetic memory] \ imbalance of #gls("PRC2", update: true, first: false)-#gls("KDM6", update: true, first: false) system@2026_epigenetic_aging_yucel
+	//bistable PRC2-KDM6 system
 
-	- #term[Nucleosome alterations] \ #todo[foo]
+	- #term[Nucleosome alterations] \ #box(inset: (right: -0.6cm))[histone variant H3.3 replaces H3.1/2@2026_epigenetic_aging_yucel]
 
-	- #term[Transcription reprogramming] \ #todo[foo]
+	- #term[Transcription reprogramming] \ accessibility reduced to enhancers for #glspl("TSG") while increased for cross-lineage genes@2026_epigenetic_aging_yucel
 
-	#todo[foo]@2025_brain_aging_and_rejuvenation_sun
+	// verbatim: "miswiring often favours stress-responsive or developmental genes", "can initiate stable changes in transcriptional programmes" @2026_epigenetic_aging_yucel
+	Collectively, epigenetic dysregulation causes a progressive loss of cell identity in ageing.@2026_epigenetic_aging_yucel
+
+	//changes in chromatin accessability
+
+	// TODO: use ref @2026_epigenetic_aging_yucel?
 
 	//Ageing thus results in progressive loss of stable cell identity.@2025_loss_of_gene_gene_coordination_in_aging_wang
 
@@ -183,8 +189,6 @@
 	// verbatim: "Notably, a transition point emerged at 24 years of age, after which compositional changes declined sharply, marking a shift from active developmental remodelling to relative cellular stability in the DLPFC" (ref: 2026, Lifespan single-cell transcriptomic atlas of the human prefrontal cortex)
 
 	// verbatim: "spatial loss of gene expression correlates with increased transcriptional variability, enhancer promiscuity and the breakdown of cell identity maintenance" (ref: 2026, Systemic epigenetic dysregulation as a driver of ageing and a therapeutic target)
-
-	#todo["miswiring often favours stress-responsive or developmental genes", "can initiate stable changes in transcriptional programmes"]@2026_epigenetic_aging_yucel
 ]
 
 // === [ Interventions on GRNs ] ===============================================
@@ -193,7 +197,7 @@
 #frame(tag: "methods")[
 	== Inference and in silico perturbation of GRNs
 
-	With the rise of #gls("sc", update: true, first:false)-multiomics, gene regulatory dynamics are now unravelled during development, maturity, ageing and pathology.@2022_cell_maturity_alvarez @2026_regvelo_wang
+	With the rise of #gls("sc", update: true, first:false)-multiomics, gene regulatory dynamics during development, maturity, ageing and pathology are now being unravelled.@2022_cell_maturity_alvarez @2026_regvelo_wang
 
 	#todo[TODO: add ref to fig 4.]
 
@@ -255,6 +259,8 @@
 		- Interventions on GRNs.
 
 		- #todo[Predict suceptible genes in neuron cell (sub)types. Vulnerable. ALS@2026_transcriptomic_altas_brain_disoders_lee]
+
+		- #todo[Restoration of feedback loops. Box 1 of @2026_epigenetic_aging_yucel]
 
 		- #lorem(5)
 

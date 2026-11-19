@@ -43,6 +43,14 @@
 		long: "topologically associating domain",
 	),
 	(
+		key: "PRC2",
+		long: "polycomb repressive complex 2",
+	),
+	(
+		key: "KDM6",
+		long: "lysine-specific demethylase 6",
+	),
+	(
 		key: "CoRC",
 		long: "core regulatory complex",
 		longplural: [core regulatory complexes],
