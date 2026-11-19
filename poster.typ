@@ -199,9 +199,15 @@
 
 	With the rise of #gls("sc", update: true, first:false)-multiomics, gene regulatory dynamics during development, maturity, ageing and pathology are now being unravelled.@2022_cell_maturity_alvarez @2026_regvelo_wang
 
-	#todo[TODO: add ref to fig 4.]
+	There exist a huge variety of methods for inferring cell-type specific #glspl("GRN") from #gls("sc")-multiomic data (e.g. scRNA-seq, scATAC-seq), such as SCENIC+.@2023_grn_inference_with_sc_multiomics_badia @2026_regvelo_wang
 
-	#lorem(15)
+	=== In silico perturbation
+
+	RegVelo is a deep learning based method for modelling gene regulatory and RNA splicing interactions.@2026_regvelo_wang
+
+	// (from literature or inferred)
+	// (splicing kinetics)
+	A prior #gls("GRN") and RNA velocity data inputs are used to simulate cell fate changes when performing #emph[in silico] perturbations of #glspl("TF") (see @fig-regvelo).@2026_regvelo_wang
 
 	/*
 	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN").@2026_restoring_grns_with_knock_ins_mugler
@@ -213,10 +219,6 @@
 	*/
 
 	//#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)].@2026_restoring_grns_with_knock_ins_mugler
-
-	=== In silico perturbation
-
-	#lorem(15)
 
 	=== In vivo validation
 
@@ -270,7 +272,7 @@
 
 		== References
 
-		#set text(size: 14pt)
+		#set text(size: 13pt)
 
 		#bibliography("references.bib", title: none, style: "spie")
 
