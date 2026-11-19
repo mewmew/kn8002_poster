@@ -123,7 +123,7 @@
 		In essence, this captures how a post-mitotic cell maintains its cell identity.@2016_what_is_a_cell_type_arendt
 
 		// (not considering adult neurogenesis).
-		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Since neurons are post-mitotic throughout adulthood, they are especially susceptible.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
+		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Neurons are especially susceptible, since they are post-mitotic throughout adulthood.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
 	]
 ]
 
@@ -144,28 +144,33 @@
 
 	== Disruptions of GRNs during ageing
 
-	A disruption of gene expression is observed during ageing, with reduced gene expression levels and gene-to-gene coordination across tissues.@2025_loss_of_gene_gene_coordination_in_aging_wang
+	In ageing, a disruption of gene regulation is observed as a universal trend across different tissues, where reduced levels of gene expression and gene-to-gene coordination are significantly correlated with age.@2025_loss_of_gene_gene_coordination_in_aging_wang
 
-	Loss of gene-to-gene coordination during ageing across tissues.
+	//Importantly, individual (rather than population based) sc-multiomics have enabled insights into gene-to-gene coordination.
 
-	A universal trend across different tissues, #todo[individual (rather than popilation based)]
+	The underlying epigenetic causes of the disrupted gene regulation include:
 
-	#lorem(10)@2025_brain_aging_and_rejuvenation_sun
+	- #term[#box(inset: (right: -0.5cm))[Deterioration of nuclear architecture]] \ weakened #gls("LAD", update: true, first: false) and #gls("TAD", update: true, first: false) boundaries
+	//loss of specificity in enhancer-promotor looping interactions
+
+	- #term[Disruption of epigenetic memory] \ #todo[foo]
+
+	- #term[Nucleosome alterations] \ #todo[foo]
+
+	- #term[Transcription reprogramming] \ #todo[foo]
+
+	#todo[foo]@2025_brain_aging_and_rejuvenation_sun
+
+	#[
+		#set text(size: 0.8em)
+		#quote(block: true, attribution: [#cite(<2025_loss_of_gene_gene_coordination_in_aging_wang>, form: "prose")])[#emph["In ageing cells, especially long-lived or non-dividing cells, chromatin architecture is progressively compromised."]]
+	]
+
+	//Ageing thus results in progressive loss of stable cell identity.@2025_loss_of_gene_gene_coordination_in_aging_wang
 
 	// verbatim: "transcriptomes of specific neurons are highly predictive of an individual’s age" (ref: 2024, Single-cell genomics and regulatory networks for 388 human brains)
 
-	=== Rainwater
-
-	A gradual loss of gene-to-gene coordination is observed during ageing across diverse tissues.
-
-	As outlined in their proof of principle paper, there is a significant positive correlation between loss of gene-to-gene coordination and ageing.@2025_loss_of_gene_gene_coordination_in_aging_wang
-
-	#todo[Molecular regulatory network, connecting cell-cell signalling and gene regulation.]
-
-	// verbatim: "Notably, a transition point emerged at 24 years of age, after which compositional changes declined sharply, marking a shift from active developmental remodelling to relative cellular stabil- ity in the DLPFC" (ref: 2026, Lifespan single-cell transcriptomic atlas of the human prefrontal cortex)
-
-	#todo[Predict suceptible genes in neuron cell (sub)types. Vulnerable. ALS@2026_transcriptomic_altas_brain_disoders_lee]
-
+	// verbatim: "Notably, a transition point emerged at 24 years of age, after which compositional changes declined sharply, marking a shift from active developmental remodelling to relative cellular stability in the DLPFC" (ref: 2026, Lifespan single-cell transcriptomic atlas of the human prefrontal cortex)
 ]
 
 // === [ Interventions on GRNs ] ===============================================
@@ -174,7 +179,10 @@
 #frame(tag: "methods")[
 	== Inference and in silico perturbation of GRNs
 
-	#lorem(50)
+	//Driven by transformative advances in
+	With the rise of #gls("sc") multiomics, gene regulatory dynamics are now unravelled during development, maturity, ageing and pathology.@2022_cell_maturity_alvarez @2026_regvelo_wang
+
+	#lorem(15)
 
 	/*
 	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN").@2026_restoring_grns_with_knock_ins_mugler
@@ -219,7 +227,7 @@
 
 		2. Epigenetic ageing disrupts regulation of gene expressions, altering cell-type specific #glspl("GRN").
 
-		3. Cell-type specific #glspl("GRN") can be inferred from #gls("sc") multiomic data (e.g. using RegVelo).
+		3. Cell-type specific #glspl("GRN") can be inferred from #gls("sc", display: "sc")-multiomic data (e.g. using RegVelo).
 
 		4. #todo[#emph[In silico] perturbations #lorem(10)]
 
@@ -229,9 +237,9 @@
 
 		- Interventions on GRNs.
 
-		- #lorem(5)
+		- #todo[Predict suceptible genes in neuron cell (sub)types. Vulnerable. ALS@2026_transcriptomic_altas_brain_disoders_lee]
 
-		- #lorem(20)
+		- #lorem(5)
 
 		#lorem(10)
 

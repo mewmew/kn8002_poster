@@ -35,6 +35,14 @@
 		long: "single-cell",
 	),
 	(
+		key: "LAD",
+		long: "lamina-associated domain",
+	),
+	(
+		key: "TAD",
+		long: "topologically associating domain",
+	),
+	(
 		key: "CoRC",
 		long: "core regulatory complex",
 		longplural: [core regulatory complexes],
