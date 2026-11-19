@@ -207,7 +207,7 @@
 
 	// (from literature or inferred)
 	// (splicing kinetics)
-	A prior #gls("GRN") and RNA velocity data inputs are used to simulate cell fate changes when performing #emph[in silico] perturbations of #glspl("TF") (see @fig-regvelo).@2026_regvelo_wang
+	A prior #gls("GRN") and RNA velocity data are used as inputs to simulate cell fate changes when performing #emph[in silico] perturbations of #glspl("TF") (see @fig-regvelo).@2026_regvelo_wang
 
 	/*
 	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN").@2026_restoring_grns_with_knock_ins_mugler
@@ -222,7 +222,7 @@
 
 	=== In vivo validation
 
-	In their pivotal study, #emph[in silico] perturbations were used to predict changes in cell fate if key #glspl("TF") were disrupted. These predictions were later validated #emph[in vivo] using knock-out experiment in zebrafish.@2026_regvelo_wang
+	A proof-of-principle #emph[in silico] perturbation was used to predict changes in (pigment) cell fate when key #glspl("TF") were disrupted. These predictions were later validated #emph[in vivo] using knock-out experiment in zebrafish.@2026_regvelo_wang
 
 ]
 
