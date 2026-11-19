@@ -98,6 +98,8 @@
 
 		== Journey in cell fate
 
+		// TODO: use ref to molecular regulatory network figure (if added) instead
+		// of @fig-core_regulatory_circuit.
 		As cells journey during development across the epigenetic Waddingtonian landscape, their cell fate is guided by morphogens and cell-cell signalling that activate or repress genes, thus establishing and (re)shaping cell-type specific gene expressions (see @fig-core_regulatory_circuit).@2016_what_is_a_cell_type_arendt
 
 		Such cell-type specific regulation of gene expression can be modelled using #glspl("GRN"), graph representations that capture the positive and negative interactions between #glspl("TF") and #glspl("G") (see @fig-grn).@2026_regvelo_wang
@@ -122,8 +124,10 @@
 
 		In essence, this captures how a post-mitotic cell maintains its cell identity.@2016_what_is_a_cell_type_arendt
 
-		// (not considering adult neurogenesis).
-		However, the fidelity of gene regulation and cell identity maintenance is impacted in ageing. Neurons are especially susceptible, since they are post-mitotic throughout adulthood.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries
+		However, in ageing the fidelity of gene regulation is diminished, thus impeding cell identity maintenance.@2026_epigenetic_aging_yucel @2025_loss_of_gene_gene_coordination_in_aging_wang
+
+		//most neurons (not considering adult neurogenesis).
+		Neurons are especially susceptible, since most neurons are post-mitotic throughout adulthood.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries @2025_loss_of_gene_gene_coordination_in_aging_wang
 	]
 ]
 
@@ -131,10 +135,14 @@
 
 // TODO: rename gap to grn-image?
 #frame(tag: "gap")[
-	#figure(
-		image("/inc/gene_regulatory_network.png", width: 80%),
-		caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions.@2026_regvelo_wang],
-	) <fig-grn>
+	// NOTE: align bottom is a hack to enable more text in the second column of
+	// the introduction to overflow into the 'gap' frame.
+	#align(bottom)[
+		#figure(
+			image("/inc/gene_regulatory_network.png", width: 75%),
+			caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions.@2026_regvelo_wang],
+		) <fig-grn>
+	]
 ]
 
 // === [ Disruptions of GRNs ] =================================================
@@ -146,14 +154,21 @@
 
 	In ageing, a disruption of gene regulation is observed as a universal trend across different tissues, where reduced levels of gene expression and gene-to-gene coordination are significantly correlated with age.@2025_loss_of_gene_gene_coordination_in_aging_wang
 
+	#[
+		#set text(size: 0.8em)
+		#quote(block: true, attribution: [#cite(<2026_epigenetic_aging_yucel>, form: "prose")])[#emph["In ageing cells, especially long-lived or non-dividing cells, chromatin architecture is progressively compromised."]]
+	]
+
+	//Measurable as higher Shannon entropy.
+
 	//Importantly, individual (rather than population based) sc-multiomics have enabled insights into gene-to-gene coordination.
 
-	The underlying epigenetic causes of the disrupted gene regulation include:
+	Leading causes of epigenetic dysregulation in ageing (see @fig-epigenetic_aging) include:
 
-	- #term[#box(inset: (right: -0.5cm))[Deterioration of nuclear architecture]] \ weakened #gls("LAD", update: true, first: false) and #gls("TAD", update: true, first: false) boundaries
+	- #term[#box(inset: (right: -0.5cm))[Deterioration of nuclear architecture]] \ #box(inset: (right: -0.5cm))[weakened #gls("LAD", update: true, first: false) and #gls("TAD", update: true, first: false) boundaries@2026_epigenetic_aging_yucel]
 	//loss of specificity in enhancer-promotor looping interactions
 
-	- #term[Disruption of epigenetic memory] \ #todo[foo]
+	- #term[Disruption of epigenetic memory] \ #todo[disruption of epigenetic feedback loops]
 
 	- #term[Nucleosome alterations] \ #todo[foo]
 
@@ -161,16 +176,15 @@
 
 	#todo[foo]@2025_brain_aging_and_rejuvenation_sun
 
-	#[
-		#set text(size: 0.8em)
-		#quote(block: true, attribution: [#cite(<2025_loss_of_gene_gene_coordination_in_aging_wang>, form: "prose")])[#emph["In ageing cells, especially long-lived or non-dividing cells, chromatin architecture is progressively compromised."]]
-	]
-
 	//Ageing thus results in progressive loss of stable cell identity.@2025_loss_of_gene_gene_coordination_in_aging_wang
 
 	// verbatim: "transcriptomes of specific neurons are highly predictive of an individual’s age" (ref: 2024, Single-cell genomics and regulatory networks for 388 human brains)
 
 	// verbatim: "Notably, a transition point emerged at 24 years of age, after which compositional changes declined sharply, marking a shift from active developmental remodelling to relative cellular stability in the DLPFC" (ref: 2026, Lifespan single-cell transcriptomic atlas of the human prefrontal cortex)
+
+	// verbatim: "spatial loss of gene expression correlates with increased transcriptional variability, enhancer promiscuity and the breakdown of cell identity maintenance" (ref: 2026, Systemic epigenetic dysregulation as a driver of ageing and a therapeutic target)
+
+	#todo["miswiring often favours stress-responsive or developmental genes", "can initiate stable changes in transcriptional programmes"]@2026_epigenetic_aging_yucel
 ]
 
 // === [ Interventions on GRNs ] ===============================================
@@ -179,8 +193,9 @@
 #frame(tag: "methods")[
 	== Inference and in silico perturbation of GRNs
 
-	//Driven by transformative advances in
-	With the rise of #gls("sc") multiomics, gene regulatory dynamics are now unravelled during development, maturity, ageing and pathology.@2022_cell_maturity_alvarez @2026_regvelo_wang
+	With the rise of #gls("sc", update: true, first:false)-multiomics, gene regulatory dynamics are now unravelled during development, maturity, ageing and pathology.@2022_cell_maturity_alvarez @2026_regvelo_wang
+
+	#todo[TODO: add ref to fig 4.]
 
 	#lorem(15)
 
@@ -208,12 +223,14 @@
 // === [ Illustrations ] =======================================================
 
 #frame(tag: "illustration")[
-
-	#figure(
-		gen-image(image("/inc/regvelo.png")),
-		caption: [RegVelo infers cell-type specific #glspl("GRN") from #gls("sc", update: false, first: false)-multiomic data. The inferred #glspl("GRN") are used to model cell fate probabilities and simulate the effects of #gls("TF", update: false, first: false)-perturbations #emph[in silico].@2026_regvelo_wang],
-	) <fig-regvelo>
-
+	// NOTE: align bottom is a hack to enable more text in the "Disruptions of
+	// GRNs during ageing" column to overflow into the 'illustration' frame.
+	#align(bottom)[
+		#figure(
+			gen-image(image("/inc/regvelo.png", width: 80%)),
+			caption: [RegVelo infers cell-type specific #glspl("GRN") from #gls("sc", update: false, first: false)-multiomic data. The inferred #glspl("GRN") are used to model cell fate probabilities and simulate the effects of #gls("TF", update: false, first: false)-perturbations #emph[in silico].@2026_regvelo_wang],
+		) <fig-regvelo>
+	]
 ]
 
 // === [ Outlook ] =============================================================

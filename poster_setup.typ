@@ -61,8 +61,7 @@
 #let subtitle-y = title-y + title-height + pad-mini      // 420 + 45 + 5   = 470 (47.0 cm)
 #let intro-y    = subtitle-y + subtitle-height + pad-mid // 470 + 45 + 25  = 540 (54.0 cm)
 #let details-y  = intro-y + intro-height + pad-mid       // 540 + 300 + 25 = 865 (86.5 cm)
-// NOTE: +15 is a hack to fix more text in the second column of the introduction.
-#let gap-y      = details-y + 15                              // 865            = 865 (86.5 cm)
+#let gap-y      = details-y                              // 865            = 865 (86.5 cm)
 
 #let details-height = paper-height - details-y - pad // 1000-865-35 = 100 (10.0 cm)
 #let gap-height     = paper-height - gap-y - pad     // 1000-865-35 = 100 (10.0 cm)
@@ -77,17 +76,17 @@
 
 // (width: 140, height: 300)
 #let description-width  = half-side-width // 140 (14.0 cm)
-#let description-height = 300             // 300 (30.0 cm)
+#let description-height = 340             // 300 (30.0 cm)
 
 // TODO: rename methods to interventions?
 
 // (width: 140, height: 300)
 #let methods-width  = half-side-width // 140 (14.0 cm)
-#let methods-height = 300             // 300 (30.0 cm)
+#let methods-height = 340             // 300 (30.0 cm)
 
 // (width: 300, height: 210)
 #let illustration-width  = side-width // 300 (30.0 cm)
-#let illustration-height = 210        // 210 (21.0 cm)
+#let illustration-height = 170        // 210 (21.0 cm)
 
 #let description-x  = ride-side-x                                         // 385              = 385 (38.5 cm)
 #let methods-x      = description-x + description-width + 2*pad-half-side // 385 + 140 + 2*10 = 545 (54.5 cm)
