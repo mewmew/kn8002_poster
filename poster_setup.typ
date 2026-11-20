@@ -41,32 +41,27 @@
 
 // (width: 300, height: 300)
 #let intro-width  = side-width
-#let intro-height = 300
+#let intro-height = 450
 
 // (width: 135, height: 105)
-#let details-width  = half-side-width - pad-mini // 140-5 = 135 (13.5 cm)
-
-// (width: 140, height: 105)
-#let gap-width  = half-side-width - pad-mini     // 140-5 = 135 (13.5 cm)
+#let details-width  = side-width
 
 #let cover-x    = pad                                 // 35            =  35  (3.5 cm)
 #let title-x    = pad                                 // 35            =  35  (3.5 cm)
 #let subtitle-x = pad                                 // 35            =  35  (3.5 cm)
 #let intro-x    = pad                                 // 35            =  35  (3.5 cm)
 #let details-x  = pad + pad-mini                      // 35 + 5        =  40  (4.0 cm)
-#let gap-x      = details-x + details-width + pad-mid // 40 + 140 + 25 = 205 (20.5 cm)
 
-#let cover-y    = pad                                    // 35             =  35  (3.5 cm)
-#let title-y    = cover-y + cover-height + pad-mid       // 35 + 360 + 25  = 420 (42.0 cm)
+//#let cover-y    = pad                                    // 35             =  35  (3.5 cm)
+//#let title-y    = cover-y + cover-height + pad-mid       // 35 + 360 + 25  = 420 (42.0 cm)
+#let title-y    = pad
 #let subtitle-y = title-y + title-height + pad-mini      // 420 + 45 + 5   = 470 (47.0 cm)
-#let intro-y    = subtitle-y + subtitle-height + pad-mid // 470 + 45 + 25  = 540 (54.0 cm)
-#let details-y  = intro-y + intro-height + pad-mid       // 540 + 300 + 25 = 865 (86.5 cm)
-#let gap-y      = details-y                              // 865            = 865 (86.5 cm)
+#let details-y  = subtitle-y + subtitle-height + pad-mid
 
-#let details-height = paper-height - details-y - pad // 1000-865-35 = 100 (10.0 cm)
-#let gap-height     = paper-height - gap-y - pad     // 1000-865-35 = 100 (10.0 cm)
+#let details-height = 5
 
-// TODO: rename gap to grn-image?
+#let intro-y    = details-y + details-height + pad-mid
+#let cover-y    = intro-y + intro-height + pad-mini
 
 // --- [ right side ] ----------------------------------------------------------
 
@@ -134,12 +129,6 @@
 		width:  details-width,
 		height: details-height,
 	),
-	gap: (
-		x:      gap-x,
-		y:      gap-y,
-		width:  gap-width,
-		height: gap-height,
-	),
 	// right side
 	description: (
 		x:      description-x,
@@ -200,7 +189,7 @@
 				style: "italic",
 			),
 			author: (
-				size: 43pt, // 15mm
+				size: 30pt, // 15mm
 				weight: "semibold",
 				fill: black,
 			),
@@ -236,7 +225,7 @@
 )
 
 #let debug-boxes = true
-#let debug-boxes = false
+//#let debug-boxes = false
 
 #let foreground = _page-foreground(frames: none)
 #if debug-boxes {

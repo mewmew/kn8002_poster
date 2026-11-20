@@ -60,15 +60,19 @@
 	title: [Gene regulatory networks in maintenance of cell identity],
 	subtitle: box(inset: 6mm)[Disruption during ageing and targetted interventions],
 	authors: [
-		Robin Eklind \
-		#text(weight: "regular")[#emph[supervisor:]]
-		#v(-0.7em)
-		Marek Bartosovic
+		#place(dy: -1mm)[
+		#grid(
+			columns: (auto, 2cm, auto),
+			[Robin Eklind],
+			[],
+			[#text(weight: "regular")[#emph[supervisor:] ]Marek Bartosovic],
+		)
+		]
 	],
-	affiliation: [Stockholm University],
-	qr-code: qr,
+	//affiliation: [Stockholm University],
+	//qr-code: qr,
 	//date: datetime.today().display(),
-	cover-image: [
+	/*cover-image: [
 		#figure(
 			image("/inc/core_regulatory_circuit.pdf", width: 85%),
 			caption: [#Glspl("CRC", update: false, first: false) maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN", update: false, first: false).@2024_cell_fate_determination_via_core_regulatory_complex_lee]
@@ -79,8 +83,8 @@
 			// NOTE: text size hack to fit on one line.
 			caption: text(size: 0.98em)[Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN", update: false, first: false).@2026_epigenetic_aging_yucel],
 		) <fig-epigenetic_aging>
-	],
-	credit: "Poster figures adapted from papers in reference list.",
+	],*/
+	//credit: "Poster figures adapted from papers in reference list.",
 	foreground: foreground,
 	background: background,
 )
@@ -88,6 +92,41 @@
 #let gen-image(img) = {
 	rect(fill: white, radius: 5mm)[#img]
 }
+
+/*
+#let details(x: 1cm, y: 1cm, width: 5cm, height: 5cm, padding: 5mm) = {
+	let col2 = palette.contrast
+	place(
+		left + top,
+		dx: x - padding,
+		dy: y - padding,
+		rect(
+			width: width + padding,
+			stroke: (left: (thickness: 3mm, paint: col2.transparentize(40%))),
+			height: height + 2 * padding,
+			fill: col2.transparentize(97%),
+			radius: 0mm,
+		)[
+			#show: styles.author
+			#authors
+			#if qr-code != none {
+				v(1fr)
+				qr-code
+			}
+			#if affiliation != none {
+				v(1fr)
+				show: styles.affiliation
+				affiliation
+			}
+			#if date != none {
+				v(1fr)
+				show: styles.date
+				date
+			}
+		],
+	)
+}
+*/
 
 // === [/ Glossary ] ===========================================================
 
@@ -114,6 +153,8 @@
 		- #term[effector genes]: \ cell-type specific physiological functions (e.g. ion channels)@2026_dissecting_grns_coverning_cell_fate_ding
 		- #term[terminal selector genes]: \ establish and maintain cell identity through coordinated regulation of #glspl("TF"), including regulation of downstream effector genes@2016_what_is_a_cell_type_arendt
 
+		#colbreak()
+
 		=== Maintenance of cell identity
 
 		To establish and maintain cell identity, #glspl("TSG") express #glspl("TF") that maintain their own expression via positive feedback loops, as denoted by a #gls("CRC") within the #gls("GRN") of a given cell type (see @fig-core_regulatory_circuit).@2024_cell_fate_determination_via_core_regulatory_complex_lee @2016_what_is_a_cell_type_arendt
@@ -128,21 +169,25 @@
 
 		//most neurons (not considering adult neurogenesis).
 		Neurons are especially susceptible, since most neurons are post-mitotic throughout adulthood.@2026_epigenetic_aging_yucel @2025_single_cell_transcriptomic_changes_in_ageing_human_brain_jeffries @2025_loss_of_gene_gene_coordination_in_aging_wang
-	]
-]
 
-// === [ GRN image ] ===========================================================
-
-// TODO: rename gap to grn-image?
-#frame(tag: "gap")[
-	// NOTE: align bottom is a hack to enable more text in the second column of
-	// the introduction to overflow into the 'gap' frame.
-	#align(bottom)[
 		#figure(
 			image("/inc/gene_regulatory_network.png", width: 75%),
 			caption: [#Glspl("GRN", first: false, update: false) specify #gls("G", display: "G") and #gls("TF", display: "TF") interactions.@2026_regvelo_wang],
 		) <fig-grn>
 	]
+
+	#figure(
+		image("/inc/core_regulatory_circuit.pdf", width: 85%),
+		caption: [#Glspl("CRC", update: false, first: false) maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN", update: false, first: false).@2024_cell_fate_determination_via_core_regulatory_complex_lee]
+	) <fig-core_regulatory_circuit>
+
+	#figure(
+		image("/inc/epigenetic_aging.pdf"),
+		// NOTE: text size hack to fit on one line.
+		caption: text(size: 0.98em)[Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN", update: false, first: false).@2026_epigenetic_aging_yucel],
+	) <fig-epigenetic_aging>
+
+	#align(right)[#text(size: 16pt, weight: 300, fill: palette.highlight.darken(40%))[Poster figures adapted from papers in reference list.]]
 ]
 
 // === [ Disruptions of GRNs ] =================================================
