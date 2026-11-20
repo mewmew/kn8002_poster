@@ -58,7 +58,7 @@
 
 #show: poster.with(
 	title: [Gene regulatory networks in maintenance of cell identity],
-	subtitle: box(inset: 6mm)[Disruption during ageing and targetted interventions],
+	subtitle: box(inset: 6mm)[Disruption during ageing and targeted interventions],
 	authors: [
 		#place(dy: -1mm)[
 		#grid(
@@ -176,8 +176,10 @@
 		) <fig-grn>
 	]
 
+	#v(1cm)
+
 	#figure(
-		image("/inc/core_regulatory_circuit.pdf", width: 85%),
+		image("/inc/core_regulatory_circuit.pdf"),
 		caption: [#Glspl("CRC", update: false, first: false) maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN", update: false, first: false).@2024_cell_fate_determination_via_core_regulatory_complex_lee]
 	) <fig-core_regulatory_circuit>
 
@@ -257,7 +259,7 @@
 	/*
 	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN").@2026_restoring_grns_with_knock_ins_mugler
 
-	This offers a proof-of-principle that targetted interventions on #glspl("GRN") may be used for restoring gene regulation and potentially function in ageing.
+	This offers a proof-of-principle that targeted interventions on #glspl("GRN") may be used for restoring gene regulation and potentially function in ageing.
 
 	// rather than diminishing returns
 	Furthermore, there are indications that multiple knock-ins could have approximately additive effects on restoration of gene regulation.@2026_restoring_grns_with_knock_ins_mugler
@@ -297,7 +299,7 @@
 
 		3. Cell-type specific #glspl("GRN") can be inferred from #gls("sc", display: "sc")-multiomic data (e.g. using RegVelo).
 
-		4. #todo[#emph[In silico] perturbations #lorem(10)]
+		4. #emph[In silico] perturbations are able to predict cell fate changes caused by changes to #glspl("TF").
 
 		== Future research
 
@@ -305,7 +307,7 @@
 
 		- Interventions on GRNs.
 
-		- #todo[Predict suceptible genes in neuron cell (sub)types. Vulnerable. ALS@2026_transcriptomic_altas_brain_disoders_lee]
+		- #todo[Predict susceptible genes in neuron cell (sub)types. Vulnerable. ALS@2026_transcriptomic_altas_brain_disoders_lee]
 
 		- #todo[Restoration of feedback loops. Box 1 of @2026_epigenetic_aging_yucel]
 
