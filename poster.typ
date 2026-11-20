@@ -58,7 +58,8 @@
 
 #show: poster.with(
 	title: [Gene regulatory networks in maintenance of cell identity],
-	subtitle: box(inset: 6mm)[Disruption during ageing and targeted interventions],
+	//subtitle: box(inset: 6mm)[Disruption during ageing and targeted interventions],
+	subtitle: box(inset: 6mm)[Disruption of cell identity during ageing],
 	authors: [
 		#place(dy: -1mm)[
 		#grid(
@@ -176,7 +177,7 @@
 		) <fig-grn>
 	]
 
-	#v(1cm)
+	#v(3cm)
 
 	#figure(
 		image("/inc/core_regulatory_circuit.pdf"),
@@ -293,6 +294,8 @@
 
 		== Summary
 
+		//#set par(justify: true)
+
 		1. #Glspl("CRC") maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN").
 
 		2. Epigenetic ageing disrupts regulation of gene expressions, altering cell-type specific #glspl("GRN").
@@ -303,17 +306,15 @@
 
 		== Future research
 
-		#lorem(15)
+		#set par(justify: true)
 
-		- Interventions on GRNs.
+		Facilitated by #gls("sc")-multiomics, we live in a time of unprecedented insights into gene regulatory dynamics.
 
-		- #todo[Predict susceptible genes in neuron cell (sub)types. Vulnerable. ALS@2026_transcriptomic_altas_brain_disoders_lee]
+		It should be possible to uncover root causes of disruptions to cell identity during ageing.
 
-		- #todo[Restoration of feedback loops. Box 1 of @2026_epigenetic_aging_yucel]
+		One promising future research field is targeted interventions to restore gene regulatory dynamics necessary to maintain cell identity (see e.g. Box 1 of #cite(<2026_epigenetic_aging_yucel>, form: "prose")).
 
-		- #lorem(5)
-
-		#lorem(10)
+		Another is to predict genes especially susceptible to perturbations in different neuronal cell types@2026_transcriptomic_altas_brain_disoders_lee.
 
 		#colbreak()
 
@@ -322,6 +323,8 @@
 		#set text(size: 13pt)
 
 		#bibliography("references.bib", title: none, style: "spie")
+
+		#set par(justify: false)
 
 		#include("/glossary.typ")
 	]

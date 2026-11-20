@@ -35,7 +35,7 @@
 
 // (width: 300, height: 45)
 #let subtitle-width  = side-width
-#let subtitle-height = 45
+#let subtitle-height = 25
 
 // TODO: rename introduction to intro?
 
