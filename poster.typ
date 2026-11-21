@@ -1,33 +1,25 @@
 #let todo = highlight
 
-#import "poster_setup.typ": poster, frame, foreground, background, palette, pad-mini
+#import "poster_setup.typ": poster, frame, foreground, background, palette
 
 #import "@preview/cellpress-unofficial:0.1.2": cellpress-blue
 #import "@preview/glossarium:0.5.10": register-glossary, make-glossary, gls, Gls, glspl, Glspl
-#import "@preview/codetastic:0.2.2": qrcode
 
-#let qr = block(
-	inset: (left: 1cm),
-	qrcode(
-		"https://www.su.se/english/research/research-catalogue/research-groups/4/marek-bartosovics-research-group",
-		width: 3cm,
-		//colors: (palette.contrast.transparentize(97%), black),
-		colors: (white, black),
-		quiet-zone: 0,
-	)
-)
-
+// term highlights the given term in the palette highlight colour.
 #let term(body) = {
 	text(fill: palette.highlight.darken(40%))[#body]
 }
 
+// style links and references.
 #show ref: set text(fill: cellpress-blue)
 #show link: set text(fill: cellpress-blue)
 #show cite: set text(fill: cellpress-blue)
 #show footnote: set text(fill: cellpress-blue)
 
+// increase spacing between list items.
 #set list(spacing: 1em)
 
+// set figure caption.
 #set figure(supplement: "Fig")
 #set figure.caption(separator: ".")
 
@@ -48,44 +40,22 @@
 
 #show figure.caption: figure-caption
 
-#show: make-glossary
-
 // === [ Glossary ] ============================================================
+
+#show: make-glossary
 
 #import "/glossary_list.typ": glossary-list
 
 #register-glossary(glossary-list)
 
+// === [/ Glossary ] ===========================================================
+
 #show: poster.with(
 	title: [Gene regulatory networks in maintenance of cell identity],
-	//subtitle: box(inset: 6mm)[Disruption during ageing and targeted interventions],
 	subtitle: box(inset: 6mm)[Disruption of cell identity during ageing],
 	authors: [
-		#place(dy: -1mm)[
-		#grid(
-			columns: (auto, 2cm, auto),
-			[Robin Eklind],
-			[],
-			[#text(weight: "regular")[#emph[supervisor:] ]Marek Bartosovic],
-		)
-		]
+		#align(horizon + left)[Robin Eklind#h(2cm)#text(weight: "regular", style: "italic")[supervisor: ]Marek Bartosovic]
 	],
-	//affiliation: [Stockholm University],
-	//qr-code: qr,
-	//date: datetime.today().display(),
-	/*cover-image: [
-		#figure(
-			image("/inc/core_regulatory_circuit.pdf", width: 85%),
-			caption: [#Glspl("CRC", update: false, first: false) maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN", update: false, first: false).@2024_cell_fate_determination_via_core_regulatory_complex_lee]
-		) <fig-core_regulatory_circuit>
-
-		#figure(
-			image("/inc/epigenetic_aging.pdf"),
-			// NOTE: text size hack to fit on one line.
-			caption: text(size: 0.98em)[Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN", update: false, first: false).@2026_epigenetic_aging_yucel],
-		) <fig-epigenetic_aging>
-	],*/
-	//credit: "Poster figures adapted from papers in reference list.",
 	foreground: foreground,
 	background: background,
 )
@@ -93,41 +63,6 @@
 #let gen-image(img) = {
 	rect(fill: white, radius: 5mm)[#img]
 }
-
-/*
-#let details(x: 1cm, y: 1cm, width: 5cm, height: 5cm, padding: 5mm) = {
-	let col2 = palette.contrast
-	place(
-		left + top,
-		dx: x - padding,
-		dy: y - padding,
-		rect(
-			width: width + padding,
-			stroke: (left: (thickness: 3mm, paint: col2.transparentize(40%))),
-			height: height + 2 * padding,
-			fill: col2.transparentize(97%),
-			radius: 0mm,
-		)[
-			#show: styles.author
-			#authors
-			#if qr-code != none {
-				v(1fr)
-				qr-code
-			}
-			#if affiliation != none {
-				v(1fr)
-				show: styles.affiliation
-				affiliation
-			}
-			#if date != none {
-				v(1fr)
-				show: styles.date
-				date
-			}
-		],
-	)
-}
-*/
 
 // === [/ Glossary ] ===========================================================
 
@@ -177,7 +112,7 @@
 		) <fig-grn>
 	]
 
-	#v(3cm)
+	#v(1fr)
 
 	#figure(
 		image("/inc/core_regulatory_circuit.pdf"),

@@ -25,10 +25,6 @@
 
 // --- [ left side ] -----------------------------------------------------------
 
-// (width: 300, height: 360)
-#let cover-width  = side-width
-#let cover-height = 360
-
 // (width: 300, height: 45)
 #let title-width  = side-width
 #let title-height = 45
@@ -41,27 +37,24 @@
 
 // (width: 300, height: 300)
 #let intro-width  = side-width
-#let intro-height = 450
 
 // (width: 135, height: 105)
 #let details-width  = side-width
 
-#let cover-x    = pad                                 // 35            =  35  (3.5 cm)
 #let title-x    = pad                                 // 35            =  35  (3.5 cm)
 #let subtitle-x = pad                                 // 35            =  35  (3.5 cm)
 #let intro-x    = pad                                 // 35            =  35  (3.5 cm)
 #let details-x  = pad + pad-mini                      // 35 + 5        =  40  (4.0 cm)
 
-//#let cover-y    = pad                                    // 35             =  35  (3.5 cm)
-//#let title-y    = cover-y + cover-height + pad-mid       // 35 + 360 + 25  = 420 (42.0 cm)
 #let title-y    = pad
 #let subtitle-y = title-y + title-height + pad-mini      // 420 + 45 + 5   = 470 (47.0 cm)
 #let details-y  = subtitle-y + subtitle-height + pad-mid
 
-#let details-height = 5
+#let details-height = 10
 
 #let intro-y    = details-y + details-height + pad-mid
-#let cover-y    = intro-y + intro-height + pad-mini
+
+#let intro-height = paper-height - details-y - details-height - pad - pad-mid
 
 // --- [ right side ] ----------------------------------------------------------
 
@@ -99,12 +92,6 @@
 
 #let custom-frames = (
 	// left side
-	cover-image: (
-		x:      cover-x,
-		y:      cover-y,
-		width:  cover-width,
-		height: cover-height,
-	),
 	title: (
 		x:      title-x,
 		y:      title-y,
@@ -225,7 +212,7 @@
 )
 
 #let debug-boxes = true
-#let debug-boxes = false
+//#let debug-boxes = false
 
 #let foreground = _page-foreground(frames: none)
 #if debug-boxes {
