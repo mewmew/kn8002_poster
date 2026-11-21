@@ -225,7 +225,7 @@
 )
 
 #let debug-boxes = true
-//#let debug-boxes = false
+#let debug-boxes = false
 
 #let foreground = _page-foreground(frames: none)
 #if debug-boxes {
