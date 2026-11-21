@@ -54,12 +54,18 @@
 	title: [Gene regulatory networks in maintenance of cell identity],
 	subtitle: box(inset: 6mm)[Disruption of cell identity during ageing],
 	authors: [
-		#align(horizon + left)[Robin Eklind#h(2cm)#text(weight: "regular", style: "italic")[supervisor: ]Marek Bartosovic]
+		#align(horizon + left)[
+			Robin Eklind
+			#h(2cm)
+			#text(weight: "regular", style: "italic")[supervisor: ]
+			Marek Bartosovic
+		]
 	],
 	foreground: foreground,
 	background: background,
 )
 
+// gen-image adds a frame surrounding the given image.
 #let gen-image(img) = {
 	rect(fill: white, radius: 5mm)[#img]
 }
@@ -70,7 +76,6 @@
 
 #frame(tag: "introduction")[
 	#columns(2)[
-
 		== Journey in cell fate
 
 		// TODO: use ref to molecular regulatory network figure (if added) instead
@@ -112,7 +117,7 @@
 		) <fig-grn>
 	]
 
-	#v(1fr)
+	#v(1fr) // align figures at bottom of page.
 
 	#figure(
 		image("/inc/core_regulatory_circuit.pdf"),
@@ -125,6 +130,7 @@
 		caption: text(size: 0.98em)[Epigenetic ageing disrupts regulation of gene expression, altering cell-type specific #glspl("GRN", update: false, first: false).@2026_epigenetic_aging_yucel],
 	) <fig-epigenetic_aging>
 
+	// figures adapted from papers.
 	#align(right)[#text(size: 16pt, weight: 300, fill: palette.highlight.darken(40%))[Poster figures adapted from papers in reference list.]]
 ]
 
@@ -132,7 +138,6 @@
 
 // TODO: rename description to disruptions?
 #frame(tag: "description")[
-
 	== Disruptions of GRNs during ageing
 
 	In ageing, a disruption of gene regulation is observed as a universal trend across different tissues, where reduced levels of gene expression and gene-to-gene coordination are significantly correlated with age.@2025_loss_of_gene_gene_coordination_in_aging_wang
@@ -161,14 +166,6 @@
 	// verbatim: "miswiring often favours stress-responsive or developmental genes", "can initiate stable changes in transcriptional programmes" @2026_epigenetic_aging_yucel
 	Collectively, epigenetic dysregulation causes a progressive loss of cell identity in ageing.@2026_epigenetic_aging_yucel
 
-	//changes in chromatin accessability
-
-	// TODO: use ref @2026_epigenetic_aging_yucel?
-
-	//Ageing thus results in progressive loss of stable cell identity.@2025_loss_of_gene_gene_coordination_in_aging_wang
-
-	// verbatim: "transcriptomes of specific neurons are highly predictive of an individual’s age" (ref: 2024, Single-cell genomics and regulatory networks for 388 human brains)
-
 	// verbatim: "Notably, a transition point emerged at 24 years of age, after which compositional changes declined sharply, marking a shift from active developmental remodelling to relative cellular stability in the DLPFC" (ref: 2026, Lifespan single-cell transcriptomic atlas of the human prefrontal cortex)
 
 	// verbatim: "spatial loss of gene expression correlates with increased transcriptional variability, enhancer promiscuity and the breakdown of cell identity maintenance" (ref: 2026, Systemic epigenetic dysregulation as a driver of ageing and a therapeutic target)
@@ -192,21 +189,9 @@
 	// (splicing kinetics)
 	A prior #gls("GRN") and RNA velocity data are used as inputs to simulate cell fate changes when performing #emph[in silico] perturbations of #glspl("TF") (see @fig-regvelo).@2026_regvelo_wang
 
-	/*
-	Single knock-ins have been used to restore age-related loss of regulatory information in #glspl("GRN").@2026_restoring_grns_with_knock_ins_mugler
-
-	This offers a proof-of-principle that targeted interventions on #glspl("GRN") may be used for restoring gene regulation and potentially function in ageing.
-
-	// rather than diminishing returns
-	Furthermore, there are indications that multiple knock-ins could have approximately additive effects on restoration of gene regulation.@2026_restoring_grns_with_knock_ins_mugler
-	*/
-
-	//#todo[Furthermore, since regulatory effect diminishes based on distance within the GRN, and since most paths between the most restorative candidate knock-in genes are distanced far from each other (most shortest paths are 3 steps or more); multiple knock-ins are expected to have little overlapping effect; thus resulting in additative effect (rather than diminishing returns)].@2026_restoring_grns_with_knock_ins_mugler
-
 	=== In vivo validation
 
 	A proof-of-principle #emph[in silico] perturbation was used to predict changes in (pigment) cell fate when key #glspl("TF") were disrupted. These predictions were later validated #emph[in vivo] using knock-out experiment in zebrafish.@2026_regvelo_wang
-
 ]
 
 // === [ Illustrations ] =======================================================
@@ -226,11 +211,7 @@
 
 #frame(tag: "outlook")[
 	#columns(2)[
-
 		== Summary
-
-		//#set par(justify: true)
-
 		1. #Glspl("CRC") maintain cell identity via positive feedback loops in cell-type specific #glspl("GRN").
 
 		2. Epigenetic ageing disrupts regulation of gene expressions, altering cell-type specific #glspl("GRN").
@@ -240,8 +221,6 @@
 		4. #emph[In silico] perturbations are able to predict cell fate changes caused by changes to #glspl("TF").
 
 		== Future research
-
-		#set par(justify: true)
 
 		Facilitated by #gls("sc")-multiomics, we live in a time of unprecedented insights into gene regulatory dynamics.
 
@@ -259,7 +238,7 @@
 
 		#bibliography("references.bib", title: none, style: "spie")
 
-		#set par(justify: false)
+		#set par(justify: false) // disable paragraph justification for glossary.
 
 		#include("/glossary.typ")
 	]

@@ -203,6 +203,7 @@
 		),
 		par: (
 			introduction: (justify: true),
+			outlook:      (justify: true),
 		),
 	),
 )
