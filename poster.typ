@@ -243,3 +243,6 @@
 		#include("/glossary.typ")
 	]
 ]
+
+// add logo
+#place(bottom+right, dx: -2cm, dy: -2cm, image("/inc/logo/su_logo.pdf", width: 5cm))
